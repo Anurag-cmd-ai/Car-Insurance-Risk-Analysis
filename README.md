@@ -1,5 +1,5 @@
 ## Car Insurance Claim Risk Intelligence
-A machine learning system that predicts the probability of a car insurance claim based on customer profile data. Built as an end-to-end project from raw data through to a deployed Streamlit application.
+A robust machine learning system that predicts the probability of a car insurance claim based on customer profile data. Built as an end-to-end project from raw data through to a deployed Streamlit application.
 
 ## Objective
 
