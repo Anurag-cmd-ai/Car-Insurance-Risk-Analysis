@@ -49,7 +49,7 @@ python -m pytest tests/ -v
 │   ├── streamlit_app.py    # Customer risk prediction interface
 │   └── dashboard.py        # Stakeholder analytics dashboard
 ├── src/
-│   ├── data.py             # Data loading and schema validation
+│   ├── dataset.py             # Data loading and schema validation
 │   ├── preprocessing.py    # sklearn ColumnTransformer builder
 │   ├── train.py            # Train/test split and model persistence
 │   ├── evaluate.py         # Metrics, calibration, and error analysis
