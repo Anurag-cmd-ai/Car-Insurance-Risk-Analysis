@@ -1,6 +1,9 @@
 ## Car Insurance Claim Risk Intelligence
 A robust machine learning system that predicts the probability of a car insurance claim based on customer profile data. Built as an end-to-end project from raw data through to a deployed Streamlit application.
 
+<img width="1407" height="876" alt="Screenshot 2026-11-12 202838" src="https://github.com/user-attachments/assets/a0cbb1a2-6753-4ed2-8476-96348b97dcd6" />
+
+
 ## Objective
 
 Estimate whether a customer is likely to file a car insurance claim during the policy period, using customer, driving, and vehicle information. The single-screen app presents the model's probability estimate and risk band.
