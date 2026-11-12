@@ -1,8 +1,16 @@
-# Car Insurance Claim Risk Intelligence
+## Car Insurance Claim Risk Intelligence
+A machine learning system that predicts the probability of a car insurance claim based on customer profile data. Built as an end-to-end project from raw data through to a deployed Streamlit application.
 
 ## Objective
 
 Estimate whether a customer is likely to file a car insurance claim during the policy period, using customer, driving, and vehicle information. The single-screen app presents the model's probability estimate and risk band.
+
+## Scope
+Given a customer profile (age, driving experience, vehicle type, credit score, etc.), the model outputs a claim probability and classifies the customer as LOW, MEDIUM, or HIGH risk. The system was validated on a held-out test set of 2,000 records and achieves:
+
+ROC-AUC: 0.8858
+F1 Score: 0.7257
+Accuracy: 82.95%
 
 ## How it helps insurers
 
@@ -18,6 +26,23 @@ Insurers can use the estimate as one input when reviewing modeled claim likeliho
 - **joblib** for saving and loading the trained model
 - **statsmodels** for the archived notebook reference
 - **pytest** for the test suite
+
+## Project layout
+
+```text
+app/
+  app.py                   Single-screen Streamlit predictor
+assets/                    App images and other static assets
+dataset/raw/               Original car insurance CSV
+models/                    Trained model pipeline
+notebooks/                 Numbered analysis and modeling scripts
+notebooks/archive/         Archived source notebook
+reports/figures/           Generated analysis figures
+src/                       Data, preprocessing, training, prediction,
+                           evaluation, interpretation, and risk logic
+tests/                     Unit tests
+requirements.txt            Python dependencies
+```
 
 ## Model results
 
@@ -41,45 +66,6 @@ streamlit run app/app.py
 Enter a customer and vehicle profile and select **Assess claim risk**. The app shows the predicted claim probability, a binary claim-risk flag using a 50% cutoff, and the model's LOW, MEDIUM, or HIGH risk band.
 
 The app loads the trained pipeline from `models/final_pipeline.joblib`.
-
-## Reproduce the analysis
-
-The numbered Python scripts in `notebooks/` contain the analysis and modeling workflow. Run them from the project root in order:
-
-```bash
-python notebooks/01_eda.py
-python notebooks/02_baseline.py
-python notebooks/03_logistic_regression.py
-python notebooks/04_random_forest.py
-python notebooks/05_model_comparison.py
-python notebooks/06_feature_interpretation.py
-python notebooks/07_error_analysis.py
-```
-
-The model comparison script saves the selected pipeline to `models/final_pipeline.joblib`. Analysis figures are saved under `reports/figures/`. The original DataCamp notebook is retained in `notebooks/archive/`.
-
-## Run the tests
-
-```bash
-python -m pytest tests/ -v
-```
-
-## Project layout
-
-```text
-app/
-  app.py                   Single-screen Streamlit predictor
-assets/                    App images and other static assets
-dataset/raw/               Original car insurance CSV
-models/                    Trained model pipeline
-notebooks/                 Numbered analysis and modeling scripts
-notebooks/archive/         Archived source notebook
-reports/figures/           Generated analysis figures
-src/                       Data, preprocessing, training, prediction,
-                           evaluation, interpretation, and risk logic
-tests/                     Unit tests
-requirements.txt            Python dependencies
-```
 
 ## Author
 
