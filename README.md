@@ -28,20 +28,43 @@ Insurers can use the estimate as one input when reviewing modeled claim likeliho
 - **pytest** for the test suite
 
 ## Project layout
-
-```text
-app/
-  app.py                   Single-screen Streamlit predictor
-assets/                    App images and other static assets
-dataset/raw/               Original car insurance CSV
-models/                    Trained model pipeline
-notebooks/                 Numbered analysis and modeling scripts
-notebooks/archive/         Archived source notebook
-reports/figures/           Generated analysis figures
-src/                       Data, preprocessing, training, prediction,
-                           evaluation, interpretation, and risk logic
-tests/                     Unit tests
-requirements.txt            Python dependencies
+```
+car-insurance-risk/
+├── app/
+│   └── app.py                       # Single-screen Streamlit predictor
+├── assets/
+│   └── car.jpg
+├── data/
+│   ├── raw/
+│   │   └── car_insurance.csv
+│   └── processed/                   # Generated data; usually Git-ignored
+├── models/
+│   └── final_pipeline.joblib
+├── notebooks/
+│   ├── 01_eda.py
+│   ├── 02_baseline.py
+│   ├── 03_logistic_regression.py
+│   ├── 04_random_forest.py
+│   ├── 05_model_comparison.py
+│   ├── 06_feature_interpretation.py
+│   ├── 07_error_analysis.py
+│   └── archive/
+├── reports/
+│   └── figures/
+├── src/
+│   └── car_insurance_risk/
+│       ├── __init__.py
+│       ├── data.py
+│       ├── preprocessing.py
+│       ├── train.py
+│       ├── predict.py
+│       ├── risk.py
+│       ├── evaluate.py
+│       └── interpret.py
+├── tests/
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ## Model results
