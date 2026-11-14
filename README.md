@@ -19,7 +19,7 @@ ROC-AUC: 0.8858
 F1 Score: 0.7257
 Accuracy: 82.95%
 
-## How it helps insurers
+## Impact
 
 Insurers can use the estimate as one input when reviewing modeled claim likelihood and potential exposure during underwriting and pricing. The app provides decision support; it does not set premiums or approve or reject coverage.
 
